@@ -1,5 +1,6 @@
 package com.talk51.skinchangeeffect
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
@@ -36,6 +37,11 @@ class MainActivity : AppCompatActivity() {
                 root_view.setBackgroundColor(Color.parseColor("#000000"))
             }
             darkMode = !darkMode
+        }
+
+        btn_go_play.setOnClickListener {
+            val intent = Intent(this@MainActivity, PlayVideoActivity::class.java)
+            startActivity(intent)
         }
 
     }
