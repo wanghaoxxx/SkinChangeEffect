@@ -1,22 +1,21 @@
 package com.talk51.skinchangeeffect
 
-import android.media.AudioAttributes
 import android.media.AudioManager
 import android.media.MediaPlayer
-import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.SurfaceHolder
 import kotlinx.android.synthetic.main.activity_play_video.*
 
-const val URL = "https://record.51talk.com/51wonderful/20180323/141173899_1521788409_1521789747_9019_w_20.mp4"
-
-
 class PlayVideoActivity : AppCompatActivity(), SurfaceHolder.Callback {
 
     private var mHolder: SurfaceHolder? = null
     private var mMediaPlayer: MediaPlayer? = null
+
+    companion object {
+        val URL = "https://record.51talk.com/51wonderful/20180323/141173899_1521788409_1521789747_9019_w_20.mp4"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
